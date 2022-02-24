@@ -64,6 +64,7 @@ class MyHomePage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: lastRow(),
     );
   }
 
@@ -257,6 +258,43 @@ class MyHomePage extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  lastRow(){
+    return Container(
+      color: Colors.white10,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0*2, vertical: 8),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Book", style: TextStyle(color: Colors.red),),
+                Icon(Icons.add)
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Save", style: TextStyle(color: Colors.red),),
+                Icon(Icons.save)
+              ],
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text("Share", style: TextStyle(color: Colors.red),),
+                Icon(Icons.share)
+              ],
+            ),
+
+          ],
+        ),
       ),
     );
   }
